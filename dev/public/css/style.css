@@ -1,0 +1,26 @@
+* {
+    border-radius: 0 !important;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button-toggle-answer {
+    float: right;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.div-qanda {
+    margin-top: 40px;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;  
+}
+
+.text-center {
+    text-align: center;
+}

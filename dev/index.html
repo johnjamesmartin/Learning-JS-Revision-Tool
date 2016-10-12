@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="John Martin">
+  <meta name="description" content="A document to help with revising JavaScript">
+
+  <title>JavaScript Revision</title>
+
+  <!-- Stylesheets -->
+
+  <link href="vendors/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="public/css/style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+
+  <!-- Scripts -->
+
+  <script src="scripts/libs/require-jquery.min.js" main-data="main"></script>
+  <script src="vendors/angular/angular.js"></script>
+  <script src="public/js/app.js"></script>
+</head>
+<body>
+
+    <!-- Container -->
+
+    <div class="container div-qanda col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+      
+      <!-- Title and subtitle -->
+      <h1 class="text-center">
+        JavaScript Revision
+      </h1>
+      <p class="text-center">
+        Make sure you can form good answers to the following questions!
+      </p>
+      <hr>
+
+      <!-- Angular-driven data interpolations -->
+      <div ng-app="myApp" ng-controller="myCtrl">
+        <div class="panel panel-default" ng-repeat="question in questions">
+          <div class="panel-heading">
+            <h4>
+              {{ $index + 1 }}. {{ question.ques }}
+              <button class="button-toggle-answer" id="toggle-answer-{{$index}}">
+                <i class="glyphicon glyphicon-chevron-down"></i>&nbsp;show answer
+              </button>
+            </h4>
+          </div>
+          <div class="panel-body">
+            {{ question.answer }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="public/js/script.js"></script>
+</body>
+</html>
